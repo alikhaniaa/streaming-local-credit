@@ -1,0 +1,52 @@
+metric: last100; ratios of means to bp with 95 % bootstrap intervals; n = seeds
+
+task          bp mean (n)                    bpsc                   fsign                    sign                     dfa                      kp        fsign / bpsc
+Hopper          2061 (10)  0.98 [0.80, 1.31] n=10  0.89 [0.72, 1.18] n=10  0.89 [0.71, 1.18] n=10  0.81 [0.66, 1.07] n=10  1.08 [0.83, 1.49] n=5    0.90 [0.78, 1.03]
+Walker2d        3437 (10)  1.05 [0.91, 1.23] n=10  0.91 [0.79, 1.06] n=10  0.93 [0.81, 1.09] n=10  0.67 [0.55, 0.81] n=10  0.86 [0.69, 1.06] n=10   0.87 [0.77, 0.97]
+HalfCheetah     4717 (10)  1.10 [0.96, 1.28] n=10  1.03 [0.88, 1.21] n=10  0.93 [0.79, 1.12] n=10  0.65 [0.56, 0.77] n=10  1.11 [0.94, 1.32] n=10   0.93 [0.84, 1.05]
+Ant             4207 (10)  1.02 [0.98, 1.06] n=10  0.94 [0.90, 0.98] n=10  0.94 [0.90, 0.99] n=10  0.61 [0.55, 0.67] n=10  0.82 [0.74, 0.89] n=10   0.92 [0.89, 0.96]
+
+pooled over the four tasks:
+  fsign / bp: 0.94 [0.87, 1.03]
+  fsign / bpsc: 0.91 [0.86, 0.96]
+  bpsc / bp: 1.04 [0.96, 1.13]
+
+Hopper without the lowest bp seed (seed 9: bp return 217; the other bp seeds 1525 to 2999):
+  fsign (all seeds) / bp without seed 9: 0.81 [0.69, 0.95]
+  fsign / bp, seed 9 dropped from both: 0.79 [0.67, 0.93]
+  pooled over the four tasks with Hopper bp seed 9 left out:
+    fsign / bp: 0.92 [0.86, 0.99]
+    bpsc / bp: 1.01 [0.95, 1.09]
+
+frozen hidden layers (separate run at 2M steps; ratio to bp of the same run):
+  Hopper       0.39 [0.21, 0.67] n=3
+  Walker2d     0.12 [0.08, 0.19] n=3
+  HalfCheetah  0.20 [0.13, 0.46] n=3
+  Ant          0.21 [0.20, 0.22] n=3
+
+
+metric: window_100k; ratios of means to bp with 95 % bootstrap intervals; n = seeds
+
+task          bp mean (n)                    bpsc                   fsign                    sign                     dfa                      kp        fsign / bpsc
+Hopper          2029 (10)  0.97 [0.79, 1.30] n=10  0.91 [0.74, 1.22] n=10  0.91 [0.73, 1.22] n=10  0.83 [0.68, 1.09] n=10  1.10 [0.84, 1.51] n=5    0.94 [0.82, 1.06]
+Walker2d        3457 (10)  1.04 [0.91, 1.22] n=10  0.91 [0.79, 1.05] n=10  0.93 [0.80, 1.08] n=10  0.67 [0.55, 0.80] n=10  0.86 [0.69, 1.04] n=10   0.87 [0.77, 0.98]
+HalfCheetah     4717 (10)  1.10 [0.96, 1.28] n=10  1.03 [0.88, 1.21] n=10  0.93 [0.79, 1.12] n=10  0.65 [0.56, 0.77] n=10  1.11 [0.94, 1.32] n=10   0.93 [0.84, 1.05]
+Ant             4215 (10)  1.02 [0.98, 1.06] n=10  0.93 [0.90, 0.97] n=10  0.94 [0.90, 0.99] n=10  0.61 [0.55, 0.67] n=10  0.81 [0.74, 0.88] n=10   0.91 [0.89, 0.95]
+
+pooled over the four tasks:
+  fsign / bp: 0.95 [0.87, 1.03]
+  fsign / bpsc: 0.91 [0.87, 0.96]
+  bpsc / bp: 1.03 [0.96, 1.13]
+
+Hopper without the lowest bp seed (seed 9: bp return 216; the other bp seeds 1593 to 2991):
+  fsign (all seeds) / bp without seed 9: 0.83 [0.71, 0.97]
+  fsign / bp, seed 9 dropped from both: 0.82 [0.70, 0.96]
+  pooled over the four tasks with Hopper bp seed 9 left out:
+    fsign / bp: 0.92 [0.87, 0.99]
+    bpsc / bp: 1.01 [0.95, 1.08]
+
+frozen hidden layers (separate run at 2M steps; ratio to bp of the same run):
+  Hopper       0.38 [0.22, 0.61] n=3
+  Walker2d     0.12 [0.08, 0.18] n=3
+  HalfCheetah  0.20 [0.13, 0.46] n=3
+  Ant          0.21 [0.20, 0.22] n=3

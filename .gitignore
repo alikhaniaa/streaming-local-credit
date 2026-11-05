@@ -1,0 +1,13 @@
+# training output
+runs/
+runs_smoke/
+*_ckpt.pkl
+*.tmp
+*.npz
+MUJOCO_LOG.TXT
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
